@@ -42,22 +42,22 @@ namespace WebApi.Controllers
 
         // PUT: api/[controller]/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, TEntity movie)
+        public async Task<IActionResult> Put(int id, TEntity entity)
         {
-            if (id != movie.Id)
+            if (id != entity.Id)
             {
                 return BadRequest();
             }
-            await repository.Update(movie);
+            await repository.Update(entity);
             return NoContent();
         }
 
         // POST: api/[controller]
         [HttpPost]
-        public async Task<ActionResult<TEntity>> Post(TEntity movie)
+        public async Task<ActionResult<TEntity>> Post(TEntity entity)
         {
-            await repository.Add(movie);
-            return CreatedAtAction("Get", new { id = movie.Id }, movie);
+            await repository.Add(entity);
+            return CreatedAtAction("Get", new { id = entity.Id }, entity);
         }
 
         // DELETE: api/[controller]/5
