@@ -1,10 +1,8 @@
 ﻿using Models.Entities;
 using Repository.Context;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Repository.Repositories.EntityFramework.Base;
 
-namespace Repository.Repositories
+namespace Repository.Repositories.EntityFramework
 {
     public class TemplateClassRepository : EFCoreRepository<TemplateClass, AppDbContext>
     {

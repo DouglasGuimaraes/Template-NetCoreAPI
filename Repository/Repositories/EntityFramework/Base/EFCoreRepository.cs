@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Models.Interfaces;
 
-namespace Repository.Repositories
+namespace Repository.Repositories.EntityFramework.Base
 {
     public abstract class EFCoreRepository<TEntity, TContext> : IRepository<TEntity>
         where TEntity : class, IEntity

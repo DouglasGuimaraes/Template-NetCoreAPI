@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\EntityFramework\" />
+    <Folder Include="Repositories\EntityFramework\Base\" />
+  </ItemGroup>
 </Project>
